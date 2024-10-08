@@ -24,11 +24,20 @@ if (7 > 8 && 7 < 10) {
 
 // Operadores lógicos
 // 4. Verifica si puedes comprar un producto de 1500 con un descuento del 25% teniendo 1150€ e imprime si puedes o no.
-function canBuyProduct() {
-    console.log(7 > 8 && 7 < 10); // Imprime: false
+const precioProducto = 1500;
+const descuento = 0.25;
+const dineroDisponible = 1150;
 
+// Calcular el precio con el descuento
+const precioConDescuento = precioProducto * (1 - descuento);
 
+// Verificar si puedes comprarlo
+if (dineroDisponible >= precioConDescuento) {
+  console.log("Puedes comprar el producto.");
+} else {
+  console.log("No puedes comprar el producto.");
 }
+
 
 // Variables
 // 5. Crea una variable llamada `mensaje` y asígnale el valor "Hola JavaScript", luego imprime la variable en consola.
